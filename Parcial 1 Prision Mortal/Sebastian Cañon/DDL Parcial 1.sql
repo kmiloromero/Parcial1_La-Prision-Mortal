@@ -244,8 +244,8 @@ ALTER TABLE Apuesta
 ADD CONSTRAINT id_Pelea FOREIGN KEY (id_Pelea) REFERENCES Pelea(idPelea),
 ADD CONSTRAINT id_Apostador1 FOREIGN KEY (id_Apostador1) REFERENCES Persona(idPersona),
 ADD CONSTRAINT id_Apostador2 FOREIGN KEY (id_Apostador2) REFERENCES Persona(idPersona),
-ADD CONSTRAINT id_L_Apostador1 FOREIGN KEY (id_L_Apostador1) REFERENCES Persona(idPersona),
-ADD CONSTRAINT id_L_Apostador2 FOREIGN KEY (id_L_Apostador2) REFERENCES Persona(idPersona);
+ADD CONSTRAINT id_L_Apostador1 FOREIGN KEY (id_L_Apostador1) REFERENCES Pelea(id_Peleador1),
+ADD CONSTRAINT id_L_Apostador2 FOREIGN KEY (id_L_Apostador2) REFERENCES Pelea(id_Peleador2);
 
 ALTER TABLE ComodidadxCelda
 ADD CONSTRAINT id_Celda FOREIGN KEY (id_Celda) REFERENCES Celda(idCelda),
